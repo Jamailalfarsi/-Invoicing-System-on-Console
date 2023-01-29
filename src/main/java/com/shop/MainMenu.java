@@ -5,17 +5,7 @@ import java.util.Scanner;
 
 public class MainMenu {
 	
-	public static void MainMenuFunction() {
-		
-		System.out.println("****************************************************");
-		System.out.println("Select one of the Shop Setting options:");
-		System.out.println("1.Load Data (Items and invoices)");
-		System.out.println("2.Set Shop Name (data should be saved)  ");
-		System.out.println("3.Set Invoice Header (Tel / Fax / Email / Website)");
-		System.out.println("4.Go Back ");
-		System.out.println("****************************************************");
-		
-	}
+	
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		
@@ -32,7 +22,9 @@ public class MainMenu {
 		
 		do {
 			
-			MainMenuFunction();
+			//MainMenuFunction();
+			for(String x:MainMenuClass.getmenuOptionList()) {
+				System.out.println(x);
 			int MainMenue1 = sc.nextInt();
 			switch(MainMenue1) {
 			case 1:
@@ -59,16 +51,17 @@ public class MainMenu {
 				
 				
 				
-			
-		}
+			}
+			}
 			}while(true);
 
-	}
-		 MenuExit =false;
+
+		//MenuExit =false;
 
 
 		
 
 	}
 
+}
 }
