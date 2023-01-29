@@ -3,7 +3,7 @@ package com.shop;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class MainMenu {
+public class MainFunction {
 	
 	
 
@@ -28,7 +28,9 @@ public class MainMenu {
 			int MainMenue1 = sc.nextInt();
 			switch(MainMenue1) {
 			case 1:
-				
+				for(String m:ShopSettingsMenu.getmenuOptionList1()) {
+					System.out.println(m);	
+				}
 				
 				 break;
 				 
