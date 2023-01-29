@@ -19,10 +19,9 @@ public class MainFunction {
 		while( MenuExit ) {
 			Scanner sc = new Scanner(System.in);
 			
-		
+			
 		do {
 			
-			//MainMenuFunction();
 			for(String x:MainMenuClass.getmenuOptionList()) {
 				System.out.println(x);
 			int MainMenue1 = sc.nextInt();
@@ -66,6 +65,7 @@ public class MainFunction {
 		
 
 	}
+		MenuExit =false;
 
 }
 }
