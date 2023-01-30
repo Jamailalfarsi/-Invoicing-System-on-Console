@@ -74,9 +74,7 @@ public class MainFunction {
 				
 			case 2:
 				
-				// DeleteItems deleteItemObj=new DeleteItems();
-				// deleteItemObj.deletItemData();
-				 
+				
 				 do {
 					 for(String m:ManageShopItems.getmenuOptionList2()) {
 							System.out.println(m);
@@ -99,7 +97,12 @@ public class MainFunction {
 							ChangeItemPrice itemPriceUpdate=new ChangeItemPrice();
 							itemPriceUpdate.changeItemData();
 							break;
-						case 4:
+						case 4:	
+							ReportAllItems printItems=new ReportAllItems();
+							printItems.ReportItemData();
+							break;
+							
+						case 5:
 							subMenuExit = false;
 							
 							break;
