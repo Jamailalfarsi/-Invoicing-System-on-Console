@@ -126,7 +126,10 @@ public class MainFunction {
 				
 				break;
 				
-				
+			case 5:	
+				ReportInvoice printInvoice=new ReportInvoice();
+				printInvoice.ReportInvoiceData();
+				break;
 				
 			}
 			}
