@@ -73,14 +73,41 @@ public class MainFunction {
 				 
 				
 			case 2:
-				for(String m:ManageShopItems.getmenuOptionList2()) {
-					System.out.println(m);
-										
-				}
-				 DeleteItems deleteItemObj=new DeleteItems();
-				 deleteItemObj.deletItemData();
 				
+				// DeleteItems deleteItemObj=new DeleteItems();
+				// deleteItemObj.deletItemData();
+				 
+				 do {
+					 for(String m:ManageShopItems.getmenuOptionList2()) {
+							System.out.println(m);
+												
+					}
+
+						int SubMenue = sc.nextInt();
+						switch(SubMenue) {
+						case 1:
+							
+							
+							 break;
+							 
+						case 2:
+							DeleteItems deleteItemObj=new DeleteItems();
+							 deleteItemObj.deletItemData();
+							 
+							break;
+						case 3:
+							ChangeItemPrice itemPriceUpdate=new ChangeItemPrice();
+							itemPriceUpdate.changeItemData();
+							break;
+						case 4:
+							subMenuExit = false;
+							
+							break;
+						
+					}
+						}while(subMenuExit);
 				
+				 
 				
 				
 				break;
