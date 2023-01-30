@@ -35,7 +35,9 @@ public class LoadData1 {
 	    String quantity  = scanner.next();
 	    
 	    System.out.println("Enter quantity amount/price");
-	    String qty_amount_price  = scanner.next();
+	    Integer qty_amount_price  = scanner.nextInt();
+	    
+	    
 	    
 	    
 

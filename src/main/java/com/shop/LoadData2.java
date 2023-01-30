@@ -82,9 +82,10 @@ public class LoadData2 {
 
 	        // Executing query
 	        int m = st.executeUpdate(sql);
-	        if (m >=  1)
+	        if (m >=  1) {
 	            System.out.println(
 	                    "inserted successfully : " + sql);
+	            System.out.println("**************************************************");}
 	        else
 	            System.out.println("insertion failed");
 
