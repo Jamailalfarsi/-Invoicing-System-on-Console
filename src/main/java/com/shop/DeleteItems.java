@@ -25,7 +25,7 @@ public class DeleteItems {
 		System.out.println("Enter id: ");
 		Integer idInput = scanner.nextInt();
 
-		String sql = "delete from product where id ='"+idInput + "'";
+		String sql = "delete from product where item_ID  ='"+idInput + "'";
 		
 	    
 	    // Connection class object
@@ -47,9 +47,11 @@ public class DeleteItems {
 
 	        // Executing query
 	        int m = st.executeUpdate(sql);
-	        if (m >=  1)
-	            System.out.println(
-	                    "deleted successfully : " + sql);
+	        if (m >=  1) {
+	            System.out.println("deleted successfully : " + sql);
+	            System.out.println("***********************************");
+	            
+	        }
 	        else
 	            System.out.println("deleted failed");
 

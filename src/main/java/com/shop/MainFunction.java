@@ -74,8 +74,14 @@ public class MainFunction {
 				
 			case 2:
 				for(String m:ManageShopItems.getmenuOptionList2()) {
-					System.out.println(m);	
+					System.out.println(m);
+										
 				}
+				 DeleteItems deleteItemObj=new DeleteItems();
+				 deleteItemObj.deletItemData();
+				
+				
+				
 				
 				break;
 				
