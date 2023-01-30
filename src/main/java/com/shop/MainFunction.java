@@ -52,6 +52,8 @@ public class MainFunction {
 						 break;
 						 
 					case 2:
+						LoadData1 productData=new LoadData1();
+						productData.LoadProductData();
 						
 						 break;
 					case 3:
