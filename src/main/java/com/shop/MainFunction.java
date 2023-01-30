@@ -38,27 +38,27 @@ public class MainFunction {
 				
               do {
 					System.out.println("Enter what do you want load:");
-					System.out.println("1-load invoice data ");
-					System.out.println("2-load item data ");
-					System.out.println("3-load customer data");
+					System.out.println("1-load customer data");
+					System.out.println("2-load invoice data ");
+					System.out.println("3-load item data ");
 					System.out.println("4-Exit");
 
 					int SubMenue = sc.nextInt();
 					switch(SubMenue) {
 					case 1:
 						
+						LoadData customerData=new LoadData();
+						customerData.LoadcustomerData();
 						
-
 						 break;
 						 
 					case 2:
-						LoadData1 productData=new LoadData1();
-						productData.LoadProductData();
-						
+						LoadData2 invoiceData=new LoadData2();
+						invoiceData.LoadInvoiceData();
 						 break;
 					case 3:
-						LoadData customerData=new LoadData();
-						customerData.LoadcustomerData();
+						LoadData1 productData=new LoadData1();
+						productData.LoadProductData();
 					
 						break;
 					case 4:
