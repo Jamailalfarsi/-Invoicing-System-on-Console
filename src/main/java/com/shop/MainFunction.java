@@ -121,8 +121,8 @@ public class MainFunction {
 				break;
 				
 			case 4:
-				
-				
+				ReportStatics noOfItemsObj=new ReportStatics();
+				noOfItemsObj.StaticsFunction();
 				
 				break;
 				
