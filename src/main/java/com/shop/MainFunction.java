@@ -14,6 +14,9 @@ public class MainFunction {
 		// TODO Auto-generated method stub
 		
 		boolean MenuExit = true;
+
+		boolean subMenuExit = true;
+		
 		
 		
 		while( MenuExit ) {
@@ -30,6 +33,39 @@ public class MainFunction {
 				for(String m:ShopSettingsMenu.getmenuOptionList1()) {
 					System.out.println(m);	
 				}
+
+				
+				
+              do {
+					System.out.println("Enter what do you want load:");
+					System.out.println("1-load invoice data ");
+					System.out.println("2-load item data ");
+					System.out.println("3-load customer data");
+					System.out.println("4-Exit");
+
+					int SubMenue = sc.nextInt();
+					switch(SubMenue) {
+					case 1:
+						
+						
+
+						 break;
+						 
+					case 2:
+						
+						 break;
+					case 3:
+						LoadData customerData=new LoadData();
+						customerData.LoadcustomerData();
+					
+						break;
+					case 4:
+						subMenuExit = false;
+						
+						break;
+					
+				}
+					}while(subMenuExit);
 				
 				 break;
 				 

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class LoadData {
 	
-	public void LoadDataMethod(){ 
+	public void LoadcustomerData(){ 
 	// Creating the connection using Oracle DB
     // Note: url syntax is standard, so do grasp
     String url = "jdbc:mysql://localhost:3306/ShopDataBase";
@@ -22,13 +22,13 @@ public class LoadData {
     Scanner scanner = new Scanner(System.in);
 
     
-    System.out.println("");
+    System.out.println("Enter Custumer ID");
     Integer customer_ID = scanner.nextInt();
     
-    System.out.println("");
+    System.out.println("Enter Customer Name");
     String customer_name = scanner.next();
 
-    System.out.println("");
+    System.out.println("Enter Invoice number");
     Integer Invoice_No  = scanner.nextInt();
 
     // Inserting data using SQL query
