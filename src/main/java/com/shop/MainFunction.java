@@ -58,9 +58,6 @@ public class MainFunction {
 						
 						System.out.println("*********************************************");
 				
-				
-				
-		
 		 
 		while( MenuExit ) {
 			
@@ -200,8 +197,6 @@ public class MainFunction {
 //				shopObj.ShopNameData();
 //				break;
 			
-			
-		
 			}
 		
 
