@@ -23,7 +23,7 @@ public class MainFunction {
 			Scanner sc = new Scanner(System.in);
 			
 			
-		do {
+		//do {
 			
 			for(String x:MainMenuClass.getmenuOptionList()) {
 				System.out.println(x);}
@@ -134,18 +134,25 @@ public class MainFunction {
 			case 6:
 				SearchInvoice searchObj=new SearchInvoice();
 				searchObj.sreachInvoicById();
+			case 7:
+				break;
 				
 			case 8:
-				MenuExit =false;
+				System.out.println("Are you sure you want to exit? if Yes press 0 if No press 1");
+				Integer userInput = sc.nextInt();
+				if(userInput==0) {
+					MenuExit =false;
+					System.out.println("The program is Exit");
+					
+				}
+				else if (userInput==1) {
+					
+					MenuExit =true;}
 				break;
 			
+			
+		
 			}
-			}while(true);
-
-
-		// MenuExit =false;
-
-
 		
 
 	}
