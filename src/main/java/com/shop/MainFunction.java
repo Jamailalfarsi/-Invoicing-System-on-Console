@@ -139,7 +139,7 @@ public class MainFunction {
 			case 7:
 				while (stk.empty() == false) {
 					System.out.println(stk.pop());
-				System.out.println(stk.pop());
+				
 				// {@code true} if and only if this stack contains
 				// no items; {@code false} otherwise.	
 
