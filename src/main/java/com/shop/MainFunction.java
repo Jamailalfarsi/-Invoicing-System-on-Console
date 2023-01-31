@@ -135,6 +135,9 @@ public class MainFunction {
 				SearchInvoice searchObj=new SearchInvoice();
 				searchObj.sreachInvoicById();
 				
+			case 8:
+				MenuExit =false;
+				break;
 			}
 			}
 			}while(true);
@@ -146,7 +149,7 @@ public class MainFunction {
 		
 
 	}
-		MenuExit =false;
+		
 
 }
 }

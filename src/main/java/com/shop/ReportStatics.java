@@ -19,7 +19,7 @@ public class ReportStatics {
 	    String pass = "root";
 
 	    
-		String sql = "SELECT (SELECT COUNT(*)FROM invoice ) AS number_of_items,(SELECT COUNT(*)FROM product  ) AS item_ID ,(SELECT Sum(total_amount )FROM invoice ) AS total_amount";
+		String sql = "SELECT (SELECT COUNT(*)FROM product ) AS No_Of_Items,(SELECT COUNT(*)FROM invoice ) AS No_of_Invoices ,(SELECT Sum(total_amount )FROM invoice ) AS Total_sales ";
 		
 		
 	    // Connection class object
@@ -44,13 +44,13 @@ public class ReportStatics {
 	      
 			 
 			while (resultSet.next()) {
-				Integer number_Of_items = resultSet.getInt("number_Of_items");
-				Integer item_ID = resultSet.getInt("item_ID");
-				Integer total_amount = resultSet.getInt("total_amount");
+				Integer number_Of_items = resultSet.getInt("No_Of_Items");
+				Integer No_of_Invoices = resultSet.getInt("No_of_Invoices");
+				Integer total_amount = resultSet.getInt("Total_sales");
 				
 				
 				
-				System.out.println(number_Of_items+","+item_ID+","+total_amount);
+				System.out.println("No_Of_Items="+number_Of_items+","+"No_of_Invoices="+No_of_Invoices+","+"Total_sales="+total_amount);
 			}
 
 	        // Executing query
