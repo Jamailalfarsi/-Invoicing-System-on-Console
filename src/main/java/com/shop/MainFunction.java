@@ -22,7 +22,7 @@ public class MainFunction {
 		Stack stk = new Stack();
 		
 		boolean usepass = true;
-		 String user,pass;
+		 String user,pass,url;
 		
 		
 				
@@ -31,6 +31,8 @@ public class MainFunction {
 					 user = sc.nextLine();
 					System.out.println("Enter Password");
 					 pass = sc.nextLine();	
+					System.out.println("Enter url");
+					url = sc.nextLine();	
 					
 					
 					try {
@@ -39,14 +41,18 @@ public class MainFunction {
 							
 							}
 					
-						else if(! pass.equals("root")){
+						if(! pass.equals("root")){
 							throw new Exception("password is not found");
+						
+						}
+						 else if(! url.equals("jdbc:mysql://localhost:3306/ShopDataBase")){
+							throw new Exception("url is not found");
 						
 						}
 						
 						
 						else {
-							System.out.println("username and password Successful welcome to main menue");
+							System.out.println("username , password and url Successful welcome to main menue");
 		
 						}
 						
@@ -82,17 +88,17 @@ public class MainFunction {
 					case 1:
 						
 						LoadData customerData=new LoadData();
-						customerData.LoadcustomerData(user,pass);
+						customerData.LoadcustomerData(user,pass,url);
 						
 						 break;
 						 
 					case 2:
 						LoadData2 invoiceData=new LoadData2();
-						invoiceData.LoadInvoiceData(user,pass);
+						invoiceData.LoadInvoiceData(user,pass,url);
 						 break;
 					case 3:
 						LoadData1 productData=new LoadData1();
-						productData.LoadProductData(user,pass);
+						productData.LoadProductData(user,pass,url);
 					
 						break;
 					case 4:
@@ -124,16 +130,16 @@ public class MainFunction {
 							 
 						case 2:
 							DeleteItems deleteItemObj=new DeleteItems();
-							 deleteItemObj.deletItemData(user,pass);
+							 deleteItemObj.deletItemData(user,pass,url);
 							 
 							break;
 						case 3:
 							ChangeItemPrice itemPriceUpdate=new ChangeItemPrice();
-							itemPriceUpdate.changeItemData(user,pass);
+							itemPriceUpdate.changeItemData(user,pass,url);
 							break;
 						case 4:	
 							ReportAllItems printItems=new ReportAllItems();
-							printItems.ReportItemData(user,pass);
+							printItems.ReportItemData(user,pass,url);
 							break;
 							
 						case 5:
@@ -154,18 +160,18 @@ public class MainFunction {
 				
 			case 4:
 				ReportStatistics noOfItemsObj=new ReportStatistics();
-				noOfItemsObj.StaticsFunction(user,pass);
+				noOfItemsObj.StaticsFunction(user,pass,url);
 				
 				break;
 				
 			case 5:	
 				ReportInvoice printInvoice=new ReportInvoice();
-				printInvoice.ReportInvoiceData(user,pass);
+				printInvoice.ReportInvoiceData(user,pass,url);
 				break;
 				
 			case 6:
 				SearchInvoice searchObj=new SearchInvoice();
-				searchObj.sreachInvoicById(user,pass);
+				searchObj.sreachInvoicById(user,pass,url);
 			case 7:
 				while (stk.empty() == false) {
 					System.out.println(stk.pop());
