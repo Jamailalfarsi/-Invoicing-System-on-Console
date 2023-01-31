@@ -10,15 +10,15 @@ import java.util.Scanner;
 
 public class DeleteItems {
 
-	public void deletItemData(){ 
+	public void deletItemData(String user,String pass){ 
 		// Creating the connection using Oracle DB
 	    // Note: url syntax is standard, so do grasp
 	    String url = "jdbc:mysql://localhost:3306/ShopDataBase";
 
 	    // Username and password to access DB
 	    // Custom initialization
-	    String user = "root";
-	    String pass = "root";
+	   // String user = "root";
+	   // String pass = "root";
 
 	    // Entering the data
 	    Scanner scanner = new Scanner(System.in);

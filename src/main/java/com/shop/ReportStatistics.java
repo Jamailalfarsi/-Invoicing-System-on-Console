@@ -8,15 +8,15 @@ import java.sql.Statement;
 
 public class ReportStatistics {
 
-	public void StaticsFunction(){ 
+	public void StaticsFunction(String user,String pass){ 
 		// Creating the connection using Oracle DB
 	    // Note: url syntax is standard, so do grasp
 	    String url = "jdbc:mysql://localhost:3306/ShopDataBase";
 
 	    // Username and password to access DB
 	    // Custom initialization
-	    String user = "root";
-	    String pass = "root";
+	   // String user = "root";
+	   // String pass = "root";
 
 	    
 		String sql = "SELECT (SELECT COUNT(*)FROM product ) AS No_Of_Items,(SELECT COUNT(*)FROM invoice ) AS No_of_Invoices ,(SELECT Sum(total_amount )FROM invoice ) AS Total_sales ";
