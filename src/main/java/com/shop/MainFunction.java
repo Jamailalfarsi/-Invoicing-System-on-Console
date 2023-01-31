@@ -131,6 +131,10 @@ public class MainFunction {
 				printInvoice.ReportInvoiceData();
 				break;
 				
+			case 6:
+				SearchInvoice searchObj=new SearchInvoice();
+				searchObj.sreachInvoicById();
+				
 			}
 			}
 			}while(true);
