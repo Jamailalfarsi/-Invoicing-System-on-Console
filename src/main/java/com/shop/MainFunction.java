@@ -2,12 +2,14 @@ package com.shop;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Stack;
+
 
 public class MainFunction {
 	
-	
+	Stack<String> stk = new Stack<String>();
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args)  {
 		
 		 
 		   
@@ -17,17 +19,17 @@ public class MainFunction {
 
 		boolean subMenuExit = true;
 		
+		Scanner sc = new Scanner(System.in);
 		
+		Stack stk = new Stack();
 		
+		 
 		while( MenuExit ) {
-			Scanner sc = new Scanner(System.in);
-			
-			
-		//do {
 			
 			for(String x:MainMenuClass.getmenuOptionList()) {
 				System.out.println(x);}
 			int MainMenue1 = sc.nextInt();
+			stk.push(MainMenue1);
 			switch(MainMenue1) {
 			case 1:
 				for(String m:ShopSettingsMenu.getmenuOptionList1()) {
@@ -37,7 +39,7 @@ public class MainFunction {
 				
 				
               do {
-					System.out.println("Enter what do you want load:");
+					System.out.println("Enter what do you want load Data:");
 					System.out.println("1-load customer data");
 					System.out.println("2-load invoice data ");
 					System.out.println("3-load item data ");
@@ -65,13 +67,13 @@ public class MainFunction {
 						subMenuExit = false;
 						
 						break;
-					
+						
 				}
 					}while(subMenuExit);
-				
+			
 				 break;
 				 
-				
+			
 			case 2:
 				
 				
@@ -135,6 +137,13 @@ public class MainFunction {
 				SearchInvoice searchObj=new SearchInvoice();
 				searchObj.sreachInvoicById();
 			case 7:
+				while (stk.empty() == false) {
+					System.out.println(stk.pop());
+				System.out.println(stk.pop());
+				// {@code true} if and only if this stack contains
+				// no items; {@code false} otherwise.	
+
+			}
 				break;
 				
 			case 8:
@@ -156,6 +165,7 @@ public class MainFunction {
 		
 
 	}
+		
 		
 
 }

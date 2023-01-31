@@ -14,7 +14,7 @@ public static List<String> getmenuOptionList(){
             "5-Report: All Invoices(Invoice No,Invoice Date,Customer Name,No of items,Total,Balance)",
 			"6-Search(1)Invoice (Search by Invoice No and Report All Invoice details with items)",
 			"7-Program Statistics (Print each Main Menu Item with how many number selected)",
-			"8- Exit");
+			"8-Exit");
 	
 	
 	return menuOptionList;

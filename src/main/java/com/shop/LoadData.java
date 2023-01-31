@@ -15,8 +15,8 @@ public class LoadData {
 
     // Username and password to access DB
     // Custom initialization
-    String user = "root";
-    String pass = "root";
+     String user = "root";
+     String pass = "root";
 
     // Entering the data
     Scanner scanner = new Scanner(System.in);
