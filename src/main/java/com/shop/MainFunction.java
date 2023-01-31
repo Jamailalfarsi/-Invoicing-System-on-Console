@@ -26,7 +26,7 @@ public class MainFunction {
 		do {
 			
 			for(String x:MainMenuClass.getmenuOptionList()) {
-				System.out.println(x);
+				System.out.println(x);}
 			int MainMenue1 = sc.nextInt();
 			switch(MainMenue1) {
 			case 1:
@@ -121,7 +121,7 @@ public class MainFunction {
 				break;
 				
 			case 4:
-				ReportStatics noOfItemsObj=new ReportStatics();
+				ReportStatistics noOfItemsObj=new ReportStatistics();
 				noOfItemsObj.StaticsFunction();
 				
 				break;
@@ -138,12 +138,12 @@ public class MainFunction {
 			case 8:
 				MenuExit =false;
 				break;
-			}
+			
 			}
 			}while(true);
 
 
-		//MenuExit =false;
+		// MenuExit =false;
 
 
 		

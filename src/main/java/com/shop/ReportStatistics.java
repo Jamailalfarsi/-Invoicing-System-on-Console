@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class ReportStatics {
+public class ReportStatistics {
 
 	public void StaticsFunction(){ 
 		// Creating the connection using Oracle DB
