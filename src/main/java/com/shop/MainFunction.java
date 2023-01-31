@@ -1,6 +1,7 @@
 package com.shop;
 
 import java.io.IOException;
+import java.sql.DriverManager;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -22,6 +23,40 @@ public class MainFunction {
 		Scanner sc = new Scanner(System.in);
 		
 		Stack stk = new Stack();
+		
+		boolean usepass = true;
+		String username,password;
+				
+				
+				
+				while(usepass) {
+					System.out.println("Enter Username");
+					username = sc.nextLine();
+				    System.out.println("Enter Password");
+					password = sc.nextLine();
+					
+					
+					try {
+						if(!username.equals("root")){
+							throw new Exception("username is not found");
+							
+							}
+					
+						else if(! password.equals("root")){
+							throw new Exception("password is not found");
+						
+						}
+						
+						
+						else {
+							System.out.println("username and password Successful welcome to main menue");
+		
+						}
+						
+						System.out.println("*********************************************");
+				
+				
+				
 		
 		 
 		while( MenuExit ) {
@@ -112,8 +147,6 @@ public class MainFunction {
 					}
 						}while(subMenuExit);
 				
-				 
-				
 				
 				break;
 				
@@ -158,6 +191,11 @@ public class MainFunction {
 					
 					MenuExit =true;}
 				break;
+				
+//			case 9:
+//				SetShopName shopObj=new SetShopName();
+//				shopObj.ShopNameData();
+//				break;
 			
 			
 		
@@ -165,7 +203,16 @@ public class MainFunction {
 		
 
 	}
-		
+		}
+				catch(Exception e){
+					System.out.println("Execption:"+ e.getMessage() );
+					
+				}
+
+				}
+				
+				
+			usepass=false;	
 		
 
 }
