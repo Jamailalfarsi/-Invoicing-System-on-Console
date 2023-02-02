@@ -7,6 +7,71 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class LoadData2 {
+	
+	public void createInvoiceData(String user,String pass,String url){ 
+		// Creating the connection using Oracle DB
+	    // Note: url syntax is standard, so do grasp
+	   // String url = "jdbc:mysql://localhost:3306/ShopDataBase";
+
+	    // Username and password to access DB
+	    // Custom initialization
+	   // String user = "root";
+	   // String pass = "root";
+		
+		String sql = "CREATE TABLE invoice " +
+                "(id INTEGER NOT NULL  , " +
+                " shop_name VARCHAR(30), " + 
+                " customer_full_name VARCHAR(50), " + 
+                " phone_number VARCHAR(20), " + 
+                " invoice_date VARCHAR(50) , " + 
+                " number_of_items int,total_amount int, " +
+                " paid_amount VARCHAR(20), " + 
+                " Header_Tel_Fax_Email_Website VARCHAR(100), " +
+                " balance INTEGER, " + 
+                " PRIMARY KEY ( id ))";
+
+	 
+	    
+
+	    // Connection class object
+	    Connection con = null;
+
+	    // Try block to check for exceptions
+	    try {
+
+	        Driver driver = (Driver) Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+	        // Registering drivers
+	        DriverManager.registerDriver(driver);
+
+	        // Reference to connection interface
+	        con = DriverManager.getConnection(url, user,
+	                pass);
+
+	        // Creating a statement
+	        Statement st = con.createStatement();
+
+	        // Executing query
+	        int m = st.executeUpdate(sql);
+	        if (m >=  0) {
+	            System.out.println(
+	                    "Created  successfully : " + sql);
+	            System.out.println("**************************************************");}
+	        else
+	            System.out.println("Created  failed");
+
+	        // Closing the connections
+	        con.close();
+	    }
+
+	    // Catch block to handle exceptions
+	    catch (Exception ex) {
+	        // Display message when exceptions occurs
+	        System.err.println(ex);
+	    }
+	}
+
+		
+
 
 	public void LoadInvoiceData(String user,String pass,String url){ 
 		// Creating the connection using Oracle DB
@@ -17,6 +82,7 @@ public class LoadData2 {
 	    // Custom initialization
 	   // String user = "root";
 	   // String pass = "root";
+		
 
 	    // Entering the data
 	    Scanner scanner = new Scanner(System.in);
@@ -54,9 +120,6 @@ public class LoadData2 {
 	    Integer balance = scanner.nextInt();
 	    
 	    
-	    
-	    
-
 	    // Inserting data using SQL query
 	    String sql = "insert into invoice values(" + id
 	            + ",'" +  shop_name +"','" +customer_full_name +"','"+phone_number +"','"+

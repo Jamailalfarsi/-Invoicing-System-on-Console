@@ -9,7 +9,8 @@ public class MainFunction {
 
 	public static void main(String[] args)  {
 		
-		 
+		
+	
 		   
 		// TODO Auto-generated method stub
 		
@@ -75,30 +76,45 @@ public class MainFunction {
 				
               do {
 					System.out.println("Enter what do you want load Data:");
-					System.out.println("1-load customer data");
-					System.out.println("2-load invoice data ");
-					System.out.println("3-load item data ");
-					System.out.println("4-Exit");
+					System.out.println("1-create customer data");
+					System.out.println("2-load customer data");
+					System.out.println("3-create invoice data ");
+					System.out.println("4-load invoice data ");
+					System.out.println("5-create item data ");
+					System.out.println("6-load item data ");
+					System.out.println("7-Exit");
 
 					int SubMenue = sc.nextInt();
 					switch(SubMenue) {
 					case 1:
+						LoadData customerTable=new LoadData();
+						customerTable.createcustomerTable(user,pass,url);
+						 break;
+					case 2:
 						
 						LoadData customerData=new LoadData();
 						customerData.LoadcustomerData(user,pass,url);
 						
 						 break;
-						 
-					case 2:
+					case 3:
+						 LoadData2 invoiceTable=new  LoadData2();
+						 invoiceTable.createInvoiceData(user,pass,url);
+						 break;
+					case 4:
 						LoadData2 invoiceData=new LoadData2();
 						invoiceData.LoadInvoiceData(user,pass,url);
 						 break;
-					case 3:
+						 
+					case 5:
+						LoadData1 productTable=new LoadData1();
+						productTable.createProductTable(user,pass,url);
+						 break;
+					case 6:
 						LoadData1 productData=new LoadData1();
 						productData.LoadProductData(user,pass,url);
 					
 						break;
-					case 4:
+					case 7:
 						subMenuExit = false;
 						
 						break;

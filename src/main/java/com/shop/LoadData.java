@@ -7,6 +7,59 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class LoadData {
+	public void createcustomerTable(String user,String pass,String url){ 
+		// Creating the connection using Oracle DB
+	    // Note: url syntax is standard, so do grasp
+	    // String url = "jdbc:mysql://localhost:3306/ShopDataBase";
+
+	    // Username and password to access DB
+	    // Custom initialization
+	      // String user = "root";
+	      // String pass = "root";
+			
+			String sql = "CREATE TABLE customer " +
+	                "(customer_ID INTEGER , " +
+	                " customer_name VARCHAR(20), " + 
+	                " Invoice_No INTEGER, " + 
+	                " PRIMARY KEY ( customer_ID))";
+			
+
+	    // Connection class object
+	    Connection con = null;
+
+	    // Try block to check for exceptions
+	    try {
+
+	        Driver driver = (Driver) Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+	        // Registering drivers
+	        DriverManager.registerDriver(driver);
+
+	        // Reference to connection interface
+	        con = DriverManager.getConnection(url, user,
+	                pass);
+
+	        // Creating a statement
+	        Statement st = con.createStatement();
+
+	        // Executing query
+	        int m = st.executeUpdate(sql);
+	        if (m >=  0)
+	            System.out.println(
+	                    "inserted successfully : " + sql);
+	        else
+	            System.out.println("insertion failed");
+
+	        // Closing the connections
+	        con.close();
+	    }
+
+	    // Catch block to handle exceptions
+	    catch (Exception ex) {
+	        // Display message when exceptions occurs
+	        System.err.println(ex);
+	    }
+	}
+
 	
 	public void LoadcustomerData(String user,String pass,String url){ 
 	// Creating the connection using Oracle DB
@@ -17,6 +70,7 @@ public class LoadData {
     // Custom initialization
       // String user = "root";
       // String pass = "root";
+		
 
     // Entering the data
     Scanner scanner = new Scanner(System.in);
@@ -56,9 +110,9 @@ public class LoadData {
         int m = st.executeUpdate(sql);
         if (m >=  1)
             System.out.println(
-                    "inserted successfully : " + sql);
+                    "Created successfully : " + sql);
         else
-            System.out.println("insertion failed");
+            System.out.println("Created  failed");
 
         // Closing the connections
         con.close();
