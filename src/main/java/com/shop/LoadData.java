@@ -45,10 +45,10 @@ public class LoadData {
 	        int m = st.executeUpdate(sql);
 	        if (m >=  0)
 	            System.out.println(
-	                    "inserted successfully : " + sql);
-	        else
-	            System.out.println("insertion failed");
-
+	                    "created successfully : " + sql);
+	        else {
+	            System.out.println("Created failed");
+	            System.out.println("*****************************************");}
 	        // Closing the connections
 	        con.close();
 	    }
@@ -110,10 +110,10 @@ public class LoadData {
         int m = st.executeUpdate(sql);
         if (m >=  1)
             System.out.println(
-                    "Created successfully : " + sql);
-        else
-            System.out.println("Created  failed");
-
+                    "Inserted successfully : " + sql);
+        else {
+            System.out.println("Inserted failed");
+        System.out.println("*****************************************");}
         // Closing the connections
         con.close();
     }
